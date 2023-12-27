@@ -1,8 +1,11 @@
 const express = require("express");
 const app = express();
-const PORT = 4100;
 const userRouter = require("./router/userRouter.js");
+
+const PORT = 4100;
+
 app.use(express.json());
+
 app.use("/", userRouter);
 
 app.use("/:id", userRouter);
